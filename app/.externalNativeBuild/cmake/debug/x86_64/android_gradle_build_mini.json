@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "/Users/aleksajovanovic/Projects/samplelightning/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
+  ],
+  "libraries": {
+    "secp256k1-Debug-x86_64": {
+      "artifactName": "secp256k1",
+      "buildCommand": "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64 --target secp256k1",
+      "abi": "x86_64",
+      "output": "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/debug/obj/x86_64/libsecp256k1.so"
+    },
+    "sqlitejdbc-Debug-x86_64": {
+      "artifactName": "sqlitejdbc",
+      "buildCommand": "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64 --target sqlitejdbc",
+      "abi": "x86_64",
+      "output": "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/debug/obj/x86_64/libsqlitejdbc.so"
+    }
+  }
+}

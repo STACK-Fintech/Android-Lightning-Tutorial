@@ -1,0 +1,74 @@
+
+{
+	"buildFiles" : [ "/Users/aleksajovanovic/Projects/samplelightning/app/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86 --target clean"
+	],
+	"libraries" : 
+	{
+		"secp256k1-Release-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "secp256k1",
+			"buildCommand" : "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86 --target secp256k1",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot -Dsecp256k1_EXPORTS -I../../../../src/main/cpp/secp256k1  -isystem /Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DHAVE_CONFIG_H    -c ",
+					"src" : "/Users/aleksajovanovic/Projects/samplelightning/app/src/main/cpp/secp256k1/secp256k1.c",
+					"workingDirectory" : "/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86"
+				},
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot -Dsecp256k1_EXPORTS -I../../../../src/main/cpp/secp256k1  -isystem /Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DHAVE_CONFIG_H    -c ",
+					"src" : "/Users/aleksajovanovic/Projects/samplelightning/app/src/main/cpp/secp256k1/org_bitcoin_NativeSecp256k1.c",
+					"workingDirectory" : "/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86"
+				},
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot -Dsecp256k1_EXPORTS -I../../../../src/main/cpp/secp256k1  -isystem /Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DHAVE_CONFIG_H    -c ",
+					"src" : "/Users/aleksajovanovic/Projects/samplelightning/app/src/main/cpp/secp256k1/org_bitcoin_Secp256k1Context.c",
+					"workingDirectory" : "/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86"
+				}
+			],
+			"output" : "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/release/obj/x86/libsecp256k1.so",
+			"toolchain" : "3772462235971678687"
+		},
+		"sqlitejdbc-Release-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sqlitejdbc",
+			"buildCommand" : "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86 --target sqlitejdbc",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot -Dsqlitejdbc_EXPORTS -I../../../../src/main/cpp/sqlitejdbc  -isystem /Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DSQLITE_HAVE_ISNAN -DSQLITE_HAVE_USLEEP -DSQLITE_ENABLE_UPDATE_DELETE_LIMIT -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_CORE -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_JSON1 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_STAT2 -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_FILE_PERMISSIONS=0666 -DSQLITE_MAX_VARIABLE_NUMBER=250000    -c ",
+					"src" : "/Users/aleksajovanovic/Projects/samplelightning/app/src/main/cpp/sqlitejdbc/NativeDB.c",
+					"workingDirectory" : "/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86"
+				},
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot -Dsqlitejdbc_EXPORTS -I../../../../src/main/cpp/sqlitejdbc  -isystem /Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DSQLITE_HAVE_ISNAN -DSQLITE_HAVE_USLEEP -DSQLITE_ENABLE_UPDATE_DELETE_LIMIT -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_CORE -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_JSON1 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_STAT2 -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_FILE_PERMISSIONS=0666 -DSQLITE_MAX_VARIABLE_NUMBER=250000    -c ",
+					"src" : "/Users/aleksajovanovic/Projects/samplelightning/app/src/main/cpp/sqlitejdbc/sqlite3.c",
+					"workingDirectory" : "/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/x86"
+				}
+			],
+			"output" : "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/release/obj/x86/libsqlitejdbc.so",
+			"toolchain" : "3772462235971678687"
+		}
+	},
+	"toolchains" : 
+	{
+		"3772462235971678687" : 
+		{
+			"cCompilerExecutable" : "/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/aleksajovanovic/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

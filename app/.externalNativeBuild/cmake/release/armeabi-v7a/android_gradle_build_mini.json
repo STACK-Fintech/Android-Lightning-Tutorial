@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "/Users/aleksajovanovic/Projects/samplelightning/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "sqlitejdbc-Release-armeabi-v7a": {
+      "artifactName": "sqlitejdbc",
+      "buildCommand": "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/armeabi-v7a --target sqlitejdbc",
+      "abi": "armeabi-v7a",
+      "output": "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/release/obj/armeabi-v7a/libsqlitejdbc.so"
+    },
+    "secp256k1-Release-armeabi-v7a": {
+      "artifactName": "secp256k1",
+      "buildCommand": "/Users/aleksajovanovic/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/release/armeabi-v7a --target secp256k1",
+      "abi": "armeabi-v7a",
+      "output": "/Users/aleksajovanovic/Projects/samplelightning/app/build/intermediates/cmake/release/obj/armeabi-v7a/libsecp256k1.so"
+    }
+  }
+}

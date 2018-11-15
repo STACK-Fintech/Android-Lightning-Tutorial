@@ -1,0 +1,15 @@
+# ninja log v5
+0	71	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/org_bitcoin_Secp256k1Context.c.o	859116e49b09bd2d
+0	92	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/org_bitcoin_NativeSecp256k1.c.o	d3f38726857e7aec
+0	373	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/secp256k1.c.o	3123b8d8b0bc62b5
+373	407	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libsecp256k1.so	edf0e049412033c0
+0	112	0	CMakeFiles/sqlitejdbc.dir/src/main/cpp/sqlitejdbc/NativeDB.c.o	60661e31917a33bc
+0	3309	0	CMakeFiles/sqlitejdbc.dir/src/main/cpp/sqlitejdbc/sqlite3.c.o	27f8b81b189a4a23
+3309	3452	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libsqlitejdbc.so	84ad36f49b647ef2
+5	231	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/org_bitcoin_Secp256k1Context.c.o	859116e49b09bd2d
+4	244	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/org_bitcoin_NativeSecp256k1.c.o	d3f38726857e7aec
+4	536	0	CMakeFiles/secp256k1.dir/src/main/cpp/secp256k1/secp256k1.c.o	3123b8d8b0bc62b5
+536	583	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libsecp256k1.so	edf0e049412033c0
+1	113	0	CMakeFiles/sqlitejdbc.dir/src/main/cpp/sqlitejdbc/NativeDB.c.o	60661e31917a33bc
+1	3604	0	CMakeFiles/sqlitejdbc.dir/src/main/cpp/sqlitejdbc/sqlite3.c.o	27f8b81b189a4a23
+3604	3759	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libsqlitejdbc.so	84ad36f49b647ef2

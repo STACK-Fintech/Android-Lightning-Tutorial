@@ -1,0 +1,4 @@
+/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/sqlitejdbc.dir
+/Users/aleksajovanovic/Projects/samplelightning/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/secp256k1.dir
