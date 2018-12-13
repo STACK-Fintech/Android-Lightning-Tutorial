@@ -276,6 +276,7 @@ public class App extends Application {
                         EventBus.getDefault().post(new LNNewChannelFailureEvent(throwable.getMessage()));
                     } else if ("connected".equals(result.toString()) || "already connected".equals(result.toString())) {
                         Log.d("bolt action", "OPEN");
+
 //                        String invoice = "lntb10u1pd6qp4xpp5d9g4pd0hhlen488wcuc6wml27arng5z29wpaq4242k7kp2czmnmqdqqcqzysgtr7n7snerumrwxa67xmhs77c5qw45ddxxk30fpha50s0n4cmhrq5huhqvqk580l7xaz9w22mxjy30lw3gymws4p0u2whph85a0whzgpd36rdh";
 //                        PaymentRequest pr = PaymentRequest.read(invoice);
 //                        final MilliSatoshi mSatAmount = WalletUtils.getAmountFromInvoice(pr);
