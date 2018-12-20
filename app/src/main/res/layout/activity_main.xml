@@ -118,24 +118,7 @@
             android:text="Connect"
             />
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:textSize="14dp"
-        android:textColor="@color/textColor"
-        android:text="Amount"
-        android:layout_marginTop="32dp"/>
 
-        <EditText
-            android:id="@+id/amount_et"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:inputType="text"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@color/textColor"
-            android:hint="enter satoshis..."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -163,15 +146,6 @@
             android:textSize="14dp"
             android:textColor="@color/textColor"
             android:text="Send Payment"/>
-
-        <Button
-            android:id="@+id/close_btn"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="14dp"
-            android:textColor="@color/textColor"
-            android:text="Close Channel"/>
 
     </LinearLayout>
 

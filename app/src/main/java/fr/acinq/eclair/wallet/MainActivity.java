@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
     EditText uriEt;
     @BindView(R.id.deposit_et)
     EditText depositEt;
-    @BindView(R.id.amount_et)
-    EditText amountEt;
     @BindView(R.id.payment_et)
     EditText paymentEt;
 
@@ -101,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     private void initKeyboard() {
         uriEt.setImeOptions(EditorInfo.IME_ACTION_DONE);
         depositEt.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        amountEt.setImeOptions(EditorInfo.IME_ACTION_DONE);
         paymentEt.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
         uriEt.setOnEditorActionListener(new EditText.OnEditorActionListener() {
@@ -115,16 +112,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         depositEt.setOnEditorActionListener(new EditText.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event){
-                if(actionId == EditorInfo.IME_ACTION_DONE){
-                    hideKeyboard();
-                    return true;
-                }
-                return false;
-            }
-        });
-        amountEt.setOnEditorActionListener(new EditText.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event){
                 if(actionId == EditorInfo.IME_ACTION_DONE){
@@ -152,8 +139,6 @@ public class MainActivity extends AppCompatActivity {
             final File datadir = new File(app.getFilesDir(), Constants.ECLAIR_DATADIR);
             final BinaryData bSeed = BinaryData.apply(new String(getWallet(datadir)));
 
-            Log.d("seed", bSeed.toString());
-
             app.checkupInit();
 
             Class.forName("org.sqlite.JDBC");
@@ -168,13 +153,9 @@ public class MainActivity extends AppCompatActivity {
             Kit kit = Await.result(fKit, Duration.create(120, "seconds"));
             ElectrumEclairWallet electrumWallet = (ElectrumEclairWallet) kit.wallet();
 
-            Future<ElectrumWallet.GetXpubResponse>  pub = electrumWallet.getXpub();
-            Log.d("pub", String.valueOf(pub));
 
             this.app.appKit = new App.AppKit(electrumWallet, kit, true);
-//            final MilliSatoshi walletBalance = this.app == null ? new MilliSatoshi(0) : package$.MODULE$.satoshi2millisatoshi(this.app.getOnchainBalance());
             final Satoshi walletBalance = this.app == null ? new Satoshi(0) : this.app.getOnchainBalance();
-            Log.d("balance", String.valueOf(walletBalance.amount()));
             balanceTv.setText(String.valueOf(walletBalance.amount()));
 
 //            Handler handler = new Handler();
@@ -187,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         catch (Exception e) {
-            Log.d("error_balance", e.getMessage());
+
         }
     }
 
@@ -222,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
-    private void doOpenChannel(String deposit) {
+    private void openChannel(String deposit) {
         final Satoshi fundingSat = CoinUtils.convertStringAmountToSat(deposit, preferredBitcoinUnit.code());
         final Long feesPerKw = fr.acinq.eclair.package$.MODULE$.feerateByte2Kw(Long.parseLong("3"));
         try {
@@ -239,9 +220,7 @@ public class MainActivity extends AppCompatActivity {
                                     EventBus.getDefault().post(new LNNewChannelFailureEvent(throwable.getMessage()));
                                 } else {
                                     Log.d("bolt action", "succeeded");
-                                    uriEt.setText("");
-                                    depositEt.setText("");
-                                    connectedTv.setTextColor(getResources().getColor(R.color.green));
+                                    updateUi();
                                     EventBus.getDefault().post(new LNNewChannelOpenedEvent(remoteNodeURI.nodeId().toString()));
                                 }
                             }
@@ -253,11 +232,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void updateUi() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                uriEt.setText("");
+                depositEt.setText("");
+                connectedTv.setTextColor(getResources().getColor(R.color.green));
+            }
+        });
+    }
+
     @OnClick(R.id.connect_btn)
     void connectButtonClick() {
         remoteNodeURI = NodeURI.parse(uriEt.getText().toString());
         String deposit = depositEt.getText().toString();
-        doOpenChannel(deposit);
+        openChannel(deposit);
     }
 
     @OnClick(R.id.payment_btn)
@@ -266,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
             String invoice = paymentEt.getText().toString();
             PaymentRequest pr = PaymentRequest.read(invoice);
             final MilliSatoshi mSatAmount = WalletUtils.getAmountFromInvoice(pr);
-            app.sendLNPayment1(mSatAmount.toLong(), pr, invoice);
+            app.sendLNPayment(mSatAmount.toLong(), pr, invoice);
             SendPaymentActivity sendPaymentActivity = new SendPaymentActivity();
             sendPaymentActivity.sendLNPayment(mSatAmount.toLong(), pr, invoice);
             balanceTv.setText(String.valueOf(this.app == null ? new Satoshi(0) : this.app.getOnchainBalance()));
@@ -274,10 +264,5 @@ public class MainActivity extends AppCompatActivity {
         catch(Exception e) {
 
         }
-    }
-
-    @OnClick(R.id.close_btn)
-    void closeButton() {
-
     }
 }

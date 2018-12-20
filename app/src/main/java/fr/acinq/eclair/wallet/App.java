@@ -276,14 +276,6 @@ public class App extends Application {
                         EventBus.getDefault().post(new LNNewChannelFailureEvent(throwable.getMessage()));
                     } else if ("connected".equals(result.toString()) || "already connected".equals(result.toString())) {
                         Log.d("bolt action", "OPEN");
-
-//                        String invoice = "lntb10u1pd6qp4xpp5d9g4pd0hhlen488wcuc6wml27arng5z29wpaq4242k7kp2czmnmqdqqcqzysgtr7n7snerumrwxa67xmhs77c5qw45ddxxk30fpha50s0n4cmhrq5huhqvqk580l7xaz9w22mxjy30lw3gymws4p0u2whph85a0whzgpd36rdh";
-//                        PaymentRequest pr = PaymentRequest.read(invoice);
-//                        final MilliSatoshi mSatAmount = WalletUtils.getAmountFromInvoice(pr);
-//                        sendLNPayment1(mSatAmount.toLong(), pr, invoice);
-//                        SendPaymentActivity sendPayment = new SendPaymentActivity();
-//                        Log.d("payment", mSatAmount.toString());
-//                        sendPayment.sendLNPayment(mSatAmount.toLong(), pr, invoice);
                         final Future<Object> openFuture = Patterns.ask(appKit.eclairKit.switchboard(), open, new Timeout(timeout));
                         openFuture.onComplete(onComplete, system.dispatcher());
                     } else {
@@ -296,7 +288,7 @@ public class App extends Application {
         }
     }
 
-    public void sendLNPayment1(final long amountMsat, final PaymentRequest pr, final String prAsString) {
+    public void sendLNPayment(final long amountMsat, final PaymentRequest pr, final String prAsString) {
         final String paymentHash = pr.paymentHash().toString();
         AsyncExecutor.create().execute(
                 () -> {
@@ -466,7 +458,4 @@ public class App extends Application {
         }
     }
 
-//    public interface AsyncInvoiceReaderTaskResponse {
-//        void sendLNPayment(final long amountMsat, final PaymentRequest pr, final String prAsString);
-//    }
 }
