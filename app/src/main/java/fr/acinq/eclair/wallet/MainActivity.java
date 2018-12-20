@@ -61,12 +61,8 @@ public class MainActivity extends AppCompatActivity {
     private App app;
     public final static String SEED_NAME = "enc_seed.dat";
     private CoinUnit preferredBitcoinUnit = CoinUtils.getUnitFromString(Constants.BTC_CODE);
-    private final String nodeURIAsString = "034fe52e98a0e9d3c21b767e1b371881265d8c7578c21f5afd6d6438da10348b36@23.239.23.44:9735";
-//    private final String nodeURIAsString = "036a83ffecf0be323b08f33a03d02f28f226ec3cf4315fb43f4c6a374d8ead6bba@159.89.214.31:9735";
-    private NodeURI remoteNodeURI = NodeURI.parse(nodeURIAsString);
+    private NodeURI remoteNodeURI;
 
-    @BindView(R.id.main_ll)
-    LinearLayout mainLl;
     @BindView(R.id.balance_tv)
     TextView balanceTv;
     @BindView(R.id.connected_tv)
